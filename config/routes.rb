@@ -4,5 +4,7 @@ Rails.application.routes.draw do
 
   get '/login_form', to: 'users#login_form', as: :login_form
   post '/login', to: 'users#login', as: :login
+  post '/create_user', to: 'users#create', as: :create_user
+  get '/logout', to: 'users#logout', as: :logout
 
 end

@@ -1,0 +1,127 @@
+body{
+  font-family: "Gill Sans MT", "Gill Sans", "Gill Sans Std", Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+}
+.container{
+  margin: 80px 250px;
+  @media screen and (max-width: 767px) {
+    margin: 80px 10px;
+  }
+  
+}
+.row {
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  width: 100%;
+  &.padding {
+    padding: 0px 20px;
+  }
+  &.right {
+    float: right;
+    text-align: right;
+  }
+  &.left {
+    text-align: left;
+    float: left;
+  }
+  &.margin {
+    margin-bottom: 1.2em;
+  }
+  &.border-bottom {
+    border-bottom: 1px solid $asphalt;
+  }
+}
+.span {
+  box-sizing: border-box;
+  margin-left: 0;
+  position: relative;
+  float: left;
+  &.right {
+    float: right;
+    text-align: right;
+    @media screen and (max-width: 479px) {
+      text-align: left;
+      float: left;
+    }
+   }
+  &.left {
+    text-align: left;
+    float: left;
+  }
+  .icon-separator {
+    display: inline-block;
+    width: 5px;
+  }
+  &.margin {
+    margin-right: 1em;
+  }
+}
+.pill{
+  @extend .span;
+  background-color: $off-white;
+  padding: 7px 14px;
+  border: 1px solid $hay-grey;
+  border-radius: 7px;
+  &.active{
+    border-color: $light-grey;
+    background-color: $sea-foam;
+  }
+  &.margin {
+    margin-right: 1em;
+  }
+  &.small {
+    padding: 5px 10px;
+  }
+}
+.match-pill{
+  padding: 8px 15px;
+}
+.well {
+  @extend .row;
+  border: 1px solid $asphalt;
+  padding: 20px;
+}
+.top-nav {
+  @extend .row;
+}
+#hooch-mask{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background-color: rgba(192,192,192,0.9);
+}
+
+#hooch-modal {
+  background-color: white;
+  padding: 40px;
+  position: relative;
+  float: left;
+  left: 50%;
+  top: 200px;
+  transform: translate(-50%, 0);
+}
+
+#hooch-dismiss {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  color: white;
+  font-size: 20px;
+}
+
+.page-container{
+  @extend .row;
+  min-height: 900px;
+}
+
+hr.spacing{
+  border: none;
+  height: 1em;
+}
+.error{
+  padding: 10px;
+  background-color: #FFCCCC;
+}
